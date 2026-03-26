@@ -6,13 +6,13 @@ UID-aware editor plugin for Godot 4 that allows developers to export and import 
 
 ## 🚀 Features
 
-**Two-Way Sync:** Export existing `.tres` files to CSV and import them back with updates.
-**UID-Aware:** Uses Godot's Unique Identifier (UID) system to track resources. If you move or rename a resource in Godot, the CSV bridge will still find and update it.
-**Type-Safe Reflection:** Automatically detects `@export` variables in your scripts to determine the correct data types (Int, Float, Color, Vector, etc.).
-**Complex Data Support:** Handles nested Dictionaries and Arrays using JSON serialization.
-**Smart Naming:** Automatically suggests filenames based on your script variables (e.g., `item_name` or `id`).
-**Editor Integration:** Docks into the bottom panel of the Godot Editor for a seamless workflow.
-**Auto Handle csv import** Creates a .import file that has keep or skip to prevent Godot from treating your exported csv as a translation file.
+* **Two-Way Sync:** Export existing `.tres` files to CSV and import them back with updates.
+* **UID-Aware:** Uses Godot's Unique Identifier (UID) system to track resources. If you move or rename a resource in Godot, the CSV bridge will still find and update it.
+* **Type-Safe Reflection:** Automatically detects `@export` variables in your scripts to determine the correct data types (Int, Float, Color, Vector, etc.).
+* **Complex Data Support:** Handles nested Dictionaries and Arrays using JSON serialization.
+* **Smart Naming:** Automatically suggests filenames based on your script variables (e.g., `item_name` or `id`).
+* **Editor Integration:** Docks into the bottom panel of the Godot Editor for a seamless workflow.
+* **Auto Handle csv import** Creates a .import file that has keep or skip to prevent Godot from treating your exported csv as a translation file.
 
 ---
 
