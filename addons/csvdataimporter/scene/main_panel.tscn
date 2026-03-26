@@ -1,0 +1,126 @@
+[gd_scene format=3 uid="uid://c2t36s3d4p1vc"]
+
+[ext_resource type="Script" uid="uid://2h65n80at0pc" path="res://addons/csvdataimporter/scripts/MainPanel.gd" id="1_joaqb"]
+
+[node name="MainPanel" type="VBoxContainer" unique_id=2129150086]
+custom_minimum_size = Vector2(400, 0)
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_joaqb")
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="." unique_id=1036454355]
+layout_mode = 2
+alignment = 2
+
+[node name="Label" type="Label" parent="HBoxContainer2" unique_id=1261606664]
+layout_mode = 2
+text = "Keep CSV Export"
+
+[node name="NotifyCheck" type="CheckBox" parent="HBoxContainer2" unique_id=588086737]
+unique_name_in_owner = true
+layout_mode = 2
+button_pressed = true
+
+[node name="Label2" type="Label" parent="HBoxContainer2" unique_id=2104118117]
+layout_mode = 2
+text = "Notifications:"
+
+[node name="KeepExportCheck" type="CheckBox" parent="HBoxContainer2" unique_id=223166107]
+unique_name_in_owner = true
+layout_mode = 2
+button_pressed = true
+
+[node name="ScriptData" type="HBoxContainer" parent="." unique_id=908383837]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="ResourceScript" type="Label" parent="ScriptData" unique_id=509275873]
+layout_mode = 2
+text = "Resource Script:"
+
+[node name="ScriptPath" type="LineEdit" parent="ScriptData" unique_id=1860742928]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+text = "res://data/resource/StatModifier.gd"
+
+[node name="ScriptBrowseButton" type="Button" parent="ScriptData" unique_id=2055023282]
+layout_mode = 2
+text = "Browse"
+
+[node name="ResourceData" type="HBoxContainer" parent="." unique_id=1131436675]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="ResourceScript" type="Label" parent="ResourceData" unique_id=1864962875]
+layout_mode = 2
+text = "Resource Directory:"
+
+[node name="DirPath" type="LineEdit" parent="ResourceData" unique_id=479810161]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+text = "res://data/statModifiers"
+
+[node name="ResourceDirBrowseButton" type="Button" parent="ResourceData" unique_id=1794097043]
+layout_mode = 2
+text = "Browse"
+
+[node name="CSVData" type="HBoxContainer" parent="." unique_id=1290511771]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="ResourceScript" type="Label" parent="CSVData" unique_id=293499679]
+layout_mode = 2
+text = "CSV File"
+
+[node name="CSVPath" type="LineEdit" parent="CSVData" unique_id=1739353943]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="CSVBrowseButton" type="Button" parent="CSVData" unique_id=379715352]
+layout_mode = 2
+text = "Browse"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=1750857494]
+layout_mode = 2
+
+[node name="ExportButton" type="Button" parent="HBoxContainer" unique_id=1194436085]
+layout_mode = 2
+text = "Export"
+
+[node name="ImportButton" type="Button" parent="HBoxContainer" unique_id=38832397]
+layout_mode = 2
+text = "Import"
+
+[node name="Label" type="Label" parent="HBoxContainer" unique_id=1218496553]
+layout_mode = 2
+text = "Import Name"
+
+[node name="NamingOptionButton" type="OptionButton" parent="HBoxContainer" unique_id=7113569]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+selected = 3
+item_count = 7
+popup/item_0/text = "stat_changes"
+popup/item_0/id = 0
+popup/item_1/text = "level_modifier"
+popup/item_1/id = 1
+popup/item_2/text = "is_negative"
+popup/item_2/id = 2
+popup/item_3/text = "name"
+popup/item_3/id = 3
+popup/item_4/text = "max_level"
+popup/item_4/id = 4
+popup/item_5/text = "modifier_color"
+popup/item_5/id = 5
+popup/item_6/text = "is_prefix"
+popup/item_6/id = 6
+
+[connection signal="pressed" from="ScriptData/ScriptBrowseButton" to="." method="_on_script_browse_button_pressed"]
+[connection signal="pressed" from="ResourceData/ResourceDirBrowseButton" to="." method="_on_resource_dir_browse_button_pressed"]
+[connection signal="pressed" from="CSVData/CSVBrowseButton" to="." method="_on_csv_browse_button_pressed"]
+[connection signal="pressed" from="HBoxContainer/ExportButton" to="." method="_on_export_pressed"]
+[connection signal="pressed" from="HBoxContainer/ImportButton" to="." method="_on_import_pressed"]
