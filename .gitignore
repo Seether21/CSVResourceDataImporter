@@ -1,3 +1,16 @@
-# Godot 4+ specific ignores
+# Godot-specific ignores
 .godot/
-/android/
+extended_editor_settings.tres
+*.translation
+*.import
+# Only ignore CSV imports if you want, but we set ours to 'keep'
+# so usually, you don't need to ignore .csv.import specifically.
+
+# Mono/C# ignores
+.mono/
+bin/
+obj/
+
+# System ignores
+.DS_Store
+Thumbs.db
