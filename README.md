@@ -1,4 +1,4 @@
-# CSVResourceDataImporter
+# CSV Resource Data Importer
 
 UID-aware editor plugin for Godot 4 that allows developers to export and import **Resources** to and from **CSV** files. This tool is designed to streamline data-heavy workflows like balancing RPG items, managing loot tables, or mass-editing game constants using external tools like Excel or Google Sheets.
 
